@@ -1,0 +1,4 @@
+[2025-12-04 06:53:10] local.INFO: Some other log entry that might not be relevant.
+[2025-12-04 06:53:18] local.INFO: LogDataController@saveLogData called {"request":{"type":"ASSET_PLACED","map_id":"1","phase":"design","details":"{\"from\":\"\",\"to\":\"{ \\\"name\\\":\\\"Health\\\", \\\"coord\\\":\\\"(1.00, 2.00)\\\", \\\"Direction\\\":\\\"Top\\\" }\"}"}}
+[2025-12-04 06:53:18] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'maze_id' in 'field list' (SQL: insert into `data_logs` (`user_id`, `maze_id`, `log_type`, `session_id`, `phase`, `timestamp`, `details`) values (1, 1, ASSET_PLACED, ...))
+[2025-12-04 06:53:19] local.INFO: Another request processed.
