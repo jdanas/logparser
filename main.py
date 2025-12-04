@@ -7,7 +7,7 @@ from rich.table import Table
 from rich.syntax import Syntax
 from rich.panel import Panel
 
-console = Console()
+console = Console(record=True)
 
 @dataclass
 class LogEntry:
@@ -84,6 +84,9 @@ def process_log_file(filename: str):
 
     except FileNotFoundError:
         console.print(f"[bold red]Error:[/bold red] File {filename} not found.")
+
+    console.save_text("parsed_output.txt")
+    console.print(f"\n[dim]Output saved to parsed_output.txt[/dim]")
 
 import sys
 
