@@ -75,13 +75,6 @@ def process_log_file(filename: str):
                         console.print(entry.message)
                     console.print("-" * 40)
 
-                # Filter 2: SQL Errors
-                elif "SQLSTATE" in entry.message:
-                    console.print(f"[bold red]Found SQL Error:[/bold red] [{entry.timestamp}]")
-                    # Highlight the error message
-                    console.print(Panel(entry.message, title="SQL Exception", border_style="red"))
-                    console.print("-" * 40)
-
     except FileNotFoundError:
         console.print(f"[bold red]Error:[/bold red] File {filename} not found.")
 
